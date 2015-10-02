@@ -14,7 +14,7 @@ public class ResourceFileReader {
 
 		List<String> indicatorList = new ArrayList<String>();
 		InputStream resourceAsStream = ResourceFileReader.class
-				.getResourceAsStream("/8QueensTestCases.txt");
+				.getResourceAsStream("/Team1_8Queen.txt");
 		BufferedReader br = new BufferedReader(new InputStreamReader(
 				resourceAsStream));
 		try {
@@ -29,7 +29,110 @@ public class ResourceFileReader {
 		} finally {
 			br.close();
 		}
-		return indicatorList;
+		
+		resourceAsStream = ResourceFileReader.class
+				.getResourceAsStream("/Team2_8Queen.txt");
+		br = new BufferedReader(new InputStreamReader(
+				resourceAsStream));
+		try {
+			while (true) {
+				String line = br.readLine();
+				if (line != null) {
+					indicatorList.add(line.trim());
+				} else {
+					break;
+				}
+			}
+		} finally {
+			br.close();
+		}
+		
+		resourceAsStream = ResourceFileReader.class
+				.getResourceAsStream("/Team3_8Queen.txt");
+		br = new BufferedReader(new InputStreamReader(
+				resourceAsStream));
+		try {
+			while (true) {
+				String line = br.readLine();
+				if (line != null) {
+					indicatorList.add(line.trim());
+				} else {
+					break;
+				}
+			}
+		} finally {
+			br.close();
+		}
+		
+		resourceAsStream = ResourceFileReader.class
+				.getResourceAsStream("/Team4_8Queen.txt");
+		br = new BufferedReader(new InputStreamReader(
+				resourceAsStream));
+		try {
+			while (true) {
+				String line = br.readLine();
+				if (line != null) {
+					indicatorList.add(line.trim());
+				} else {
+					break;
+				}
+			}
+		} finally {
+			br.close();
+		}
+		
+		resourceAsStream = ResourceFileReader.class
+				.getResourceAsStream("/Team5_8Queen.txt");
+		br = new BufferedReader(new InputStreamReader(
+				resourceAsStream));
+		try {
+			while (true) {
+				String line = br.readLine();
+				if (line != null) {
+					indicatorList.add(line.trim());
+				} else {
+					break;
+				}
+			}
+		} finally {
+			br.close();
+		}
+		
+		resourceAsStream = ResourceFileReader.class
+				.getResourceAsStream("/Team6_8Queen.txt");
+		br = new BufferedReader(new InputStreamReader(
+				resourceAsStream));
+		try {
+			while (true) {
+				String line = br.readLine();
+				if (line != null) {
+					indicatorList.add(line.trim());
+				} else {
+					break;
+				}
+			}
+		} finally {
+			br.close();
+		}
+		
+		resourceAsStream = ResourceFileReader.class
+				.getResourceAsStream("/Team7_8Queen.txt");
+		br = new BufferedReader(new InputStreamReader(
+				resourceAsStream));
+		try {
+			while (true) {
+				String line = br.readLine();
+				if (line != null) {
+					indicatorList.add(line.trim());
+				} else {
+					break;
+				}
+			}
+		} finally {
+			br.close();
+		}
+		
+				return indicatorList;
 	}
 
 	/**
@@ -45,7 +148,7 @@ public class ResourceFileReader {
 			input[i] = 0;
 		}
 				
-		for (int i = 0; i < charArray.length; i++) {
+		for (int i = 0; i<charArray.length && i<8; i++) {
 			input[i] = Character.getNumericValue(charArray[i]);
 		}
 		return input;
